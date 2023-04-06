@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora de Resistência</title>
+	<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #2d3748;">
+    <div class="logo">
+        <img src="images/bg_f8f8f8-flat_750x_075_f-pad_750x1000_f8f8f8-removebg-preview.png" alt="Console.log">
+    </div> 
+    <section>
+        <div class="h1">
+            <h1>Calculadora de Resistência</h1>
+        </div>
+    </section>
+	<main>
+		<form>
+			<label for="resistor1">Resistor 1:</label>
+			<input type="number" id="resistor1" name="resistor1" min="1" max="1000000" required>
+
+			<label for="resistor2">Resistor 2:</label>
+			<input type="number" id="resistor2" name="resistor2" min="1" max="1000000" required>
+
+			<label for="resistor3">Resistor 3:</label>
+			<input type="number" id="resistor3" name="resistor3" min="1" max="1000000" required>
+
+			<button type="button" onclick="calcularResistencia()">Calcular</button>
+		</form>
+
+		<div id="resultado">
+			<p>Fórmula: Req = R1 + R2 + R3</p>
+			<p>Resistência Equivalente:</p>
+			<p id="valorReq"></p>
+			<p>Resistor mais próximo:</p>
+			<p id="resistorProx"></p>
+		</div>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>
